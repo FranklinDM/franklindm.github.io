@@ -1,11 +1,18 @@
 /* Containers */
 body {
   background: #C0C0C0;
+  margin: 0;
+}
+h1, h2 {
+  background: #C0C0C0;
+  border-bottom: 1px solid ThreeDShadow;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 .column {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 .center-container {
   align-items: center;
