@@ -10,13 +10,13 @@
     </linearGradient>
   </defs>
   <g id="file">
+    <use width="100%" height="100%" transform="translate(6 6)" xlink:href="#file-individual"/>
+    <use width="100%" height="100%" transform="translate(4 4)" xlink:href="#file-individual"/>
+    <use width="100%" height="100%" transform="translate(2 2)" xlink:href="#file-individual"/>
     <g id="file-individual">
       <path fill="url(#fileGradient)" d="M1 0h8v10H1z"/>
       <path fill="#9c9c9c" d="M1 0v10h8V0zm1 1h6v8H2z"/>
     </g>
-    <use width="100%" height="100%" transform="translate(2 2)" xlink:href="#file-individual"/>
-    <use width="100%" height="100%" transform="translate(4 4)" xlink:href="#file-individual"/>
-    <use width="100%" height="100%" transform="translate(6 6)" xlink:href="#file-individual"/>
   </g>
   <g id="view">
     <path fill="#a7dd8c" d="M17 2v1h2V2z"/>
