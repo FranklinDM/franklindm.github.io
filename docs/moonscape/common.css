@@ -14,6 +14,9 @@ h1, h2 {
   display: flex;
   flex-direction: column;
 }
+.margin-position {
+  margin: 2em 0;
+}
 .center-container {
   align-items: center;
 }
@@ -93,4 +96,19 @@ table {
 }
 h3 {
   text-decoration: underline;
+}
+img {
+  max-width: 80%;
+  height: auto;
+  width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  body {
+    margin: 0 1em;
+  }
+  #main-paragraph {
+    width: 100%;
+  }
 }
