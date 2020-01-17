@@ -1,143 +1,25 @@
-:root {
-  /* page */
-  --page-background-color: #E7E2DC;
-  --page-text-color: #000;
-  --header-background-color: #2B2D2C;
-  --header-text-color: #fff;
-  /* tooltips */
-  --tooltip-background-color: #000;
-  --tooltip-text-color: #fff;
-  /* buttons */
-  --button-background-color: #000;
-  --button-text-color: #fff;
-  --button-background-hover-color: #222;
-  --button-background-hover-active-color: #111;
-}
-
-/*** site header ***/
-#Header {
-  background-color: var(--header-background-color);
-  color: var(--header-text-color);
-  max-width: 50px;
-  height: auto;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-}
-
-#Header ul,
-#Header li {
-  display: block;
+.align-center {
   text-align: center;
 }
-#Header ul {
-  padding: 0;
+.align-left {
+  text-align: left;
 }
-#Header li {
-  padding: 15px;
-}
-#Header a:hover {
-  text-decoration: underline;
-}
-#Header a,
-#Header a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-#Header .tooltip {
-  --tooltip-background-color: var(--header-background-color);
-  font-weight: bold;
-  margin-left: 0.5em;
+.align-right {
+  text-align: right;
 }
 
-/*** content ***/
-html, body {
-  height: 100%;
-}
-body {
-  background-color: var(--page-background-color);
-  color: var(--page-text-color);
-  font-family: "Courier New", serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-}
-.content {
-  padding: 1em 5em;
+#Quote {
+  font-size: 1.95em;
+  font-family: serif;
+  text-align: center;
+  font-style: italic;
 }
 
-.flex-container {
-  display: flex;
+table {
+  border: 1px outset;
+  width: 100%;
 }
-.flex-column {
-  flex-direction: column;
-}
-
-/*** text ***/
-.superscript {
-  position: relative;
-  top: -0.5em;
-  font-size: 80%;
-}
-
-/*** tooltips ***/
-.hastooltip:hover .tooltip {
-  visibility: visible;
-}
-
-.tooltip {
-  background: var(--tooltip-background-color);
-  color: var(--tooltip-text-color);
-  border: 1px solid black;
-  padding: 10px;
-  position: absolute;
-  margin-top: -0.5em;
-  z-index: 5;
-  width: 200px;
-  visibility: collapse;
-}
-
-/*** buttons ***/
-.button {
-  border: 2px solid var(--button-background-color);
-  background: var(--button-background-color);
-  padding: 4px;
-  margin: 4px;
-}
-.button:hover {
-  cursor: pointer;
-  background: var(--button-background-hover-color);
-}
-.button:hover:active {
-  background: var(--button-background-hover-active-color);
-}
-
-/*** etc ***/
-#special {
-  font-weight: bold;
-  font-size: 2em;
-  text-align: justify;
-  max-width: 700px;
-}
-.tooltip-pm {
-  font-size: 2.5em;
-  width: 500px !important;
-}
-
-/*** responsive design ***/
-#Header, .content,
-#Header li {
-  transition: padding 300ms;
-}
-
-@media all and (max-width: 800px) {
-  .content {
-    padding: 0 3.5em;
-  }
-  #Header li {
-    padding: 8px;
-  }
+th, td {
+  border: 1px inset;
+  width: 50%;
 }
