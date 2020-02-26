@@ -1,8 +1,9 @@
 html {
   background-color: #000;
-  color: #fff;
+  color: #25F212;
 }
 
 a {
-  color: #66A8E5;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
 }

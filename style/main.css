@@ -1,3 +1,12 @@
+html {
+  font-family: monospace;
+  min-height: 100%;
+}
+
+.content-center {
+  margin-top: 15%;
+}
+
 .align-center {
   text-align: center;
 }
@@ -8,11 +17,15 @@
   text-align: right;
 }
 
-#Quote {
+.quote {
   font-size: 1.95em;
   font-family: serif;
   text-align: center;
   font-style: italic;
+}
+
+.nav-item-selected {
+  font-weight: bold;
 }
 
 table {
