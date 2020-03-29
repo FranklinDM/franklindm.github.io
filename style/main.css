@@ -20,6 +20,14 @@
   font-style: italic;
 }
 
+#content pre {
+  text-align: center;
+}
+#content pre > a {
+  text-decoration: none !important;
+  background-color: transparent;
+}
+
 .nav-item-selected {
   font-weight: bold;
   font-size: 1.3em;
