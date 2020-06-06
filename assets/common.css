@@ -1,0 +1,126 @@
+/* ::::: primary ::::: */
+
+:root {
+  --color-primary: #00FF00;
+  --color-accent: #004B00;
+  --color-background: #000000;
+  --page-font: monospace;
+}
+
+html {
+  font-family: var(--page-font);
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+hr {
+  border: 1px solid var(--color-primary);
+}
+
+table {
+  border: 1px solid var(--color-primary);
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--color-primary);
+  width: 50%;
+  padding: 0.5em;
+}
+
+th {
+  background-color: var(--color-accent);
+}
+
+/* ::::: content ::::: */
+
+#container {
+  max-width: 800px;
+  margin: auto;
+}
+
+#container.center {
+  margin: 40vh auto;
+}
+
+#footer {
+  font-style: italic;
+}
+
+#timer {
+  line-height: 0;
+}
+
+/* ::::: navigation ::::: */
+
+#navigation > .nav {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-accent);
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+#navigation > .nav:hover {
+  background-color: var(--color-primary);
+}
+
+#navigation > .separator::after {
+  content: "|";
+}
+
+#navigation > #menu-button {
+  text-align: center;
+  background-color: transparent;
+  color: inherit;
+  display: none;
+}
+
+#navigation > #menu-button:hover {
+  text-decoration: underline;
+}
+
+#navigation[state="hidden"] > #menu-button::after {
+  content: '↓';
+}
+
+#navigation[state="active"] > #menu-button::after {
+  content: '↑';
+}
+
+/* ::::: responsive design ::::: */
+
+@media screen and (max-width: 620px) {
+  #container.center {
+    margin: auto;
+  }
+  
+  #navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #navigation > .separator {
+    display: none;
+  }
+  
+  #navigation[hide-menu="true"][state="hidden"] > .nav:not(:first-child) {
+    display: none;
+  }
+  
+  #navigation > .nav:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+  
+  #navigation[hide-menu="true"] > #menu-button {
+    display: block;
+  }
+}
