@@ -3,13 +3,13 @@
 :root {
   --color-primary: #00FF00;
   --color-accent: #004B00;
-  --color-background: #000000;
+  --page-background: #000000 fixed url("pattern.svg");
   --page-font: monospace;
 }
 
 html {
   font-family: var(--page-font);
-  background-color: var(--color-background);
+  background: var(--page-background);
   color: var(--color-primary);
 }
 
@@ -19,7 +19,7 @@ a {
 
 a:hover {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-accent);
 }
 
 hr {
@@ -60,40 +60,41 @@ th {
   line-height: 0;
 }
 
-/* ::::: navigation ::::: */
+/* ::::: buttons ::::: */
 
-#navigation > .nav {
+.button {
+  display: block;
   border: 1px solid var(--color-primary);
   background-color: var(--color-accent);
   text-decoration: none;
   padding: 0.5em;
 }
 
-#navigation > .nav:hover {
+.button:hover {
   background-color: var(--color-primary);
 }
 
-#navigation > .separator::after {
-  content: "|";
+/* ::::: navigation ::::: */
+
+#navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-#navigation > #menu-button {
-  text-align: center;
-  background-color: transparent;
-  color: inherit;
+#navigation > li:not(:last-child) {
+  margin-right: 1em;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu-button {
   display: none;
-}
-
-#navigation > #menu-button:hover {
-  text-decoration: underline;
-}
-
-#navigation[state="hidden"] > #menu-button::after {
-  content: '↓';
-}
-
-#navigation[state="active"] > #menu-button::after {
-  content: '↑';
 }
 
 /* ::::: responsive design ::::: */
@@ -103,24 +104,28 @@ th {
     margin: auto;
   }
   
+  #header {
+    position: sticky;
+    top: 0;
+    background: var(--page-background);
+    border-bottom: 1px solid var(--color-primary);
+  }
+  
   #navigation {
-    display: flex;
     flex-direction: column;
-  }
-  
-  #navigation > .separator {
-    display: none;
-  }
-  
-  #navigation[hide-menu="true"][state="hidden"] > .nav:not(:first-child) {
-    display: none;
-  }
-  
-  #navigation > .nav:not(:last-child) {
     margin-bottom: 0.5em;
   }
   
-  #navigation[hide-menu="true"] > #menu-button {
+  #navigation.hidden {
+    display: none;
+  }
+  
+  #navigation > li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  #menu-button {
     display: block;
   }
 }
