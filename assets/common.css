@@ -1,8 +1,8 @@
 /* ::::: primary ::::: */
 
 :root {
-  --color-primary: #00FF00;
-  --color-accent: #004B00;
+  --color-primary: #33FF33;
+  --color-accent: #045D14;
   --page-background: #000000 fixed url("pattern.svg");
   --page-font: monospace;
 }
@@ -18,8 +18,7 @@ a {
 }
 
 a:hover {
-  background-color: var(--color-primary);
-  color: var(--color-accent);
+  text-shadow: 0 0 5px #0BF338;
 }
 
 hr {
@@ -27,6 +26,7 @@ hr {
 }
 
 table {
+  background-color: #000000;
   border: 1px solid var(--color-primary);
   width: 100%;
 }
@@ -65,13 +65,18 @@ th {
 .button {
   display: block;
   border: 1px solid var(--color-primary);
-  background-color: var(--color-accent);
+  background-color: #000000;
   text-decoration: none;
   padding: 0.5em;
 }
 
-.button:hover {
+.button:hover:not(:focus) {
+  text-decoration: underline;
+}
+
+.button:focus {
   background-color: var(--color-primary);
+  color: #000000;
 }
 
 /* ::::: navigation ::::: */
